@@ -1,6 +1,13 @@
 //complete this code
 class Rectangle {
 	constructor(width,height){
+	if ( width <= 0) {
+         throw new Error("Width must be a positive integer");
+	}
+	if ( height <= 0) {
+         throw new Error("Height must be a positive integer");
+	}
+		
 		this._width = width;
 		this._height = height;
 	}
@@ -19,6 +26,9 @@ class Rectangle {
 
 class Square extends Rectangle {
 	constructor(side){
+		if ( side <= 0) {
+         throw new Error("Side must be a positive integer");
+	}
 		super(side,side);
 	}
 
